@@ -41,7 +41,7 @@ public class DroneController {
 						deliveries.add(bfRead);
 					}
 				} catch (Exception e) {
-					e.printStackTrace();
+					logger.error(Constants.DRONE_QTY_ERROR_MSG);
 				}
 				drone = prepareDron(deliveries, fileindex);
 				if (deliveries.size() <= drone.getCapacity()) {
